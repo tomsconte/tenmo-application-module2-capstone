@@ -49,6 +49,8 @@ public class JdbcTranserDao implements TransferDao{
         return false;
     }
 
+    //TODO: Make sure to change ViewTransfers to Transfers when the consolidation is completed.
+
     public List<ViewTransfers> getTransfersById() {
         List<ViewTransfers> allTransfersById = new ArrayList<>();
         String sql = "SELECT t.transfer_id, 'To: '||u.username AS username, t.amount, ts.transfer_status_desc, t.account_from AS account_id "
@@ -72,6 +74,8 @@ public class JdbcTranserDao implements TransferDao{
         }
         return allTransfersById;
     }
+
+    //TODO: Same with this ViewTransfers. This needs to be Transfer.
 
     public ViewTransfers getTransferDescription (Long transferId) {
         ViewTransfers allTransfersById = new ViewTransfers();
@@ -110,6 +114,8 @@ public class JdbcTranserDao implements TransferDao{
             return "Insufficient funds for transfer";
         }
     }
+
+    //TODO: This needs to be consolidated using try/catches. Have a base and then go from there.
 
     private ViewTransfers mapRowToViewTransfers(SqlRowSet rs) {
         ViewTransfers viewTransfers = new ViewTransfers();

@@ -25,6 +25,7 @@ public class TransferController {
         this.transferDao = transferDao;
     }
 
+    //TODO: This has to change in the future. Need to cut the Transfer constructor, consolidate ViewTransfer and Transfer.
 
     @RequestMapping(path = "transfers", method = RequestMethod.POST)
     public String transfer(@RequestBody Transfer transfer) {
@@ -34,6 +35,8 @@ public class TransferController {
         }
         return "Unsuccessful transfer! Please input an amount that does not exceed your balance.";
     }
+
+    //TODO: Merge values of Transfer and ViewTransfer and then edit the following methods to ensure I am using Transfer.
 
     @RequestMapping(value = "/transfers", method = RequestMethod.GET)
     public ViewTransfers[] listTransfersById(/*@PathVariable Long accountId*/) {

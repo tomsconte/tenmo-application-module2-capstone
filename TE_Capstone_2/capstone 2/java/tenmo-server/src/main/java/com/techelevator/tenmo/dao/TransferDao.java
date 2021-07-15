@@ -12,8 +12,4 @@ public interface TransferDao {
    ViewTransfers getTransferDescription (Long transferId);
    String updateTransferRequest(Transfer transfer, int statusId);
 
-//   boolean updateTransferStatus(Long transferId, Long transferStatusId, Long accountFrom, Long accountTo, BigDecimal amount);
-
-//
-//   Transfer getTransferByTransferId(Long transferId);
 }

@@ -1,5 +1,8 @@
 package com.techelevator.tenmo.model;
 import java.math.BigDecimal;
+
+//TODO:Remove Constructor and consolidate with ViewTransfer.
+
 public class Transfer {
     private Long transferId;
     private Long transferTypeId;
