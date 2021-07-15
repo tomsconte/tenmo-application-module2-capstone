@@ -2,7 +2,7 @@ package com.techelevator.tenmo.model;
 
 import java.math.BigDecimal;
 
-//TODO: Make sure that everything in ViewTransfers is over in Transfer for the consolidation.
+//TODO: Make sure that everything in ViewTransfers is over in Transfer for the consolidation..
 
 public class ViewTransfers {
 
